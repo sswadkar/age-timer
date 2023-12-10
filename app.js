@@ -31,9 +31,16 @@ $(document).ready(function(){
 
         setInterval(function(){
             var age = getAge(dob);
+            updateProgressBar(age);
             $("#age").html(age.year + "<sup>." + age.ms + "</sup>");
+            
         }, 100);
     };
+
+    function updateProgressBar(age){
+        const element = document.querySelector('#bar');
+        element.style.width = (age.age/76 * 100).toString() + "%";
+    }
 
     function renderChoose()
     {
@@ -49,7 +56,8 @@ $(document).ready(function(){
         
         return {
             "year": majorMinor[0],
-            "ms": majorMinor[1]
+            "ms": majorMinor[1],
+            "age": years
         };
     };
 

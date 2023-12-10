@@ -108,3 +108,18 @@ footer {
   -webkit-flex-direction: row;
   -webkit-justify-content: center;
 }
+
+#progress {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #C5C3C6;
+}
+
+#bar {
+  width: 1%;
+  height: 30px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #494949;
+}
